@@ -1,0 +1,18 @@
+{
+    "layer": "top",
+    "height": 16,
+    "spacing": 0,
+    "position":"top",
+    "modules-left": [ "sway/mode", "sway/workspaces", "sway/window" ],
+    "modules-center": ["clock"],
+    "modules-right": [ "tray", "network", "pulseaudio", "cpu", "memory", "battery", "battery#bat2" ],
+    "include":[
+        "~/.config/waybar/module.d/system.json",
+        "~/.config/waybar/module.d/sway.json"
+    ],
+    "tray": {
+        "icon-size": 12,
+        "spacing": 8
+    }
+}
+

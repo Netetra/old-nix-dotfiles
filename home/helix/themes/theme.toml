@@ -1,0 +1,23 @@
+inherits = "monokai"
+
+# LSP Inlay-hints style
+"ui.virtual.inlay-hint" = { fg = "inlay_hints" }
+#"ui.background"  = {}
+
+[palette]
+type = "#A6E22E"
+keyword = "#F92672"
+regex = "#CE9178"
+special = "#C586C0"
+variable = "#F8F8F2"
+fn_declaration = "#A6E22E"
+
+background = "#272822"
+text = "#f8f8f2"
+active_text = "#ffffff"
+cursor = "#a6a6a6"
+inactive_cursor = "#878b91"
+widget = "#1e1f1c"
+selection = "#414339"
+
+inlay_hints = "#7d7d7d"

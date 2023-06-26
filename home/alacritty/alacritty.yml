@@ -1,0 +1,45 @@
+import:
+    - ~/.config/alacritty/theme.yaml
+
+font:
+    size: 6
+    normal:
+        family: "Fira Code"
+        style: Regular
+    bold:
+        family: "Fira Code"
+        style: Bold
+    italic:
+        family: "Fira Code"
+        style: Italic
+
+env:
+    TERM: alacritty
+
+mouse:
+    hide_when_typing: true
+    hints:
+        launcher: open
+        modifiers: None
+
+selection:
+    save_to_clipboard: true
+
+window:
+    decorations: full
+    dynamic_title: true
+    startup_mode: Windowed
+    opacity: 0.9
+
+cursor:
+    style:
+        shape: Beam
+        blinking: Always
+    blink_interval: 500
+    unfocused_hollow: true
+    thickness: 0.15
+
+key_bindings:
+    - { key: V, mods: Control, action: Paste }
+
+live_config_reload: true

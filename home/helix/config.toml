@@ -1,0 +1,97 @@
+
+##### エディタ設定 #####
+
+# テーマ
+theme = "theme"
+
+[editor]
+shell = [ "/bin/fish", "-c"]
+true-color = true
+cursorline = true
+auto-completion = true
+auto-format = true
+auto-save = true
+
+# 画面に収まるように改行して表示する
+[editor.soft-wrap]
+enable = true
+
+# ステータスバー
+[editor.statusline]
+left = [ "mode", "spinner", "version-control" ]
+center = [ "file-name" ]
+right = [ "diagnostics", "selections", "position", "file-encoding", "file-line-ending" ]
+separator = ">"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+# モードごとのカーソルの見た目
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+# 空白文字の可視化
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "-"
+tab = "-"
+
+[editor.indent-guides]
+render = true
+character = "|"
+skip-levels = 2
+
+# Rustのライフタイム注釈のためにシングルクオートは補完しない
+[editor.auto-pairs]
+'(' = ')'
+'[' = ']'
+'{' = '}'
+'"' = '"'
+
+# LSPの設定
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+
+########## キー設定 ##########
+
+##### NORMALモード #####
+[keys.normal]
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"
+
+# カーソル移動
+a = "move_line_up"
+s = "move_line_down"
+d = "move_char_left"
+f = "move_char_right"
+
+# モード切替
+";" = "command_mode"
+
+
+
+
+##### INSERTモード #####
+[keys.insert]
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"

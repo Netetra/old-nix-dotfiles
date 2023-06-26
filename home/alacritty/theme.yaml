@@ -1,0 +1,27 @@
+# Colors (Material Theme)
+colors:
+  # Default colors
+  primary:
+    background: '0x272822'
+    foreground: '0xf8f8f2'
+  # Normal colors
+  normal:
+    black:   '0x2c2525'
+    red:     '0xfd6883'
+    green:   '0xadda78'
+    yellow:  '0xf9cc6c'
+    blue:    '0xa8a9eb'
+    magenta: '0xf38d76'
+    cyan:    '0x85dacc'
+    white:   '0xfff1f3'
+
+  # Bright colors
+  bright:
+    black:   '0x72696a'
+    red:     '0xfd6883'
+    green:   '0xadda78'
+    yellow:  '0xf9cc6c'
+    blue:    '0xa8a9eb'
+    magenta: '0xf38d76'
+    cyan:    '0x85dacc'
+    white:   '0xfff1f3'
