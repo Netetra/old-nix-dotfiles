@@ -1,0 +1,106 @@
+#| メモ
+・左ALTはWeztermの操作で予約済み
+・左Superはウィンドウ操作で予約済みs
+
+レイヤーテンプレート
+(deflayer
+  _     _    _    _    _    _    _    _    _    _    _    _     _
+  _     _    _    _    _    _    _    _    _    _    _    _     _     _
+  _     _    _    _    _    _    _    _    _    _    _    _     _     _
+  _     _    _    _    _    _    _    _    _    _    _    _     _
+  _     _    _    _    _    _    _    _    _    _    _    _     _
+  _     _    _         _         _         _              _     _     _
+)
+
+|#
+
+
+(defcfg
+  input (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  output (uinput-sink "KMonad kbd")
+  allow-cmd false
+)
+
+
+(defsrc
+  esc   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12
+  `     1    2    3    4    5    6    7    8    9    0    -     =     bspc
+  tab   q    w    e    r    t    y    u    i    o    p    [     ]     ret
+  caps  a    s    d    f    g    h    j    k    l    ;    '     \
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft  up
+  lctl  lmet lalt      spc       ralt      rctl           left  down  rght
+)
+
+
+(deflayer base
+  _     f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12
+  _     _    _    _    _    _    _    _    _    _    _    _     _     _
+  @`    @q   @w   @e   @r   @t   @y   @u   @i   @o   @p   bspc  _     _
+  @ret  @a   @s   @d   @f   @g   @h   @j   @k   @l   @;   @'    del
+  esc   @z   @x   @c   @v   @b   @n   @m   @,   @.   @/   rsft  _
+  _     lmet lalt      spc       @syms     _              _     _     _
+)
+
+
+(deflayer syms
+  _     _    _    _    _    _    _    _    _    _    _    _     _
+  _     _    _    _    _    _    _    _    _    _    _    _     _     _
+  _     _    _    _    _    _    _    @7   @8   @9   _    _     _     _
+  _     up   down left rght @[   @]   @4   @5   @6   @-   @=    _
+  _     _    _    _    _    _    @0   @1   @2   @3   @\   _     _
+  _     _    _         tab       _         _              _     _     _
+)
+
+
+(defalias
+  syms (layer-toggle syms)
+
+  ret (tap-hold 250 ret lctl)
+  1 (tap-hold 250 1 !)
+  2 (tap-hold 250 2 @)
+  3 (tap-hold 250 3 #)
+  4 (tap-hold 250 4 $)
+  5 (tap-hold 250 5 %)
+  6 (tap-hold 250 6 ^)
+  7 (tap-hold 250 7 &)
+  8 (tap-hold 250 8 *)
+  9 (tap-hold 250 9 \()
+  0 (tap-hold 250 0 \))
+  a (tap-hold 250 a A)
+  b (tap-hold 250 b B)
+  c (tap-hold 250 c C)
+  d (tap-hold 250 d D)
+  e (tap-hold 250 e E)
+  f (tap-hold 250 f F)
+  g (tap-hold 250 g G)
+  h (tap-hold 250 h H)
+  i (tap-hold 250 i I)
+  j (tap-hold 250 j J)
+  k (tap-hold 250 k K)
+  l (tap-hold 250 l L)
+  m (tap-hold 250 m M)
+  n (tap-hold 250 n N)
+  o (tap-hold 250 o O)
+  p (tap-hold 250 p P)
+  q (tap-hold 250 q Q)
+  r (tap-hold 250 r R)
+  s (tap-hold 250 s S)
+  t (tap-hold 250 t T)
+  u (tap-hold 250 u U)
+  v (tap-hold 250 v V)
+  w (tap-hold 250 w W)
+  x (tap-hold 250 x X)
+  y (tap-hold 250 y Y)
+  z (tap-hold 250 z Z)
+  - (tap-hold 250 - \_)
+  = (tap-hold 250 = +)
+  [ (tap-hold 250 [ {)
+  ] (tap-hold 250 ] })
+  ; (tap-hold 250 ; :)
+  ' (tap-hold 250 ' ")
+  \ (tap-hold 250 \ |)
+  , (tap-hold 250 , <)
+  . (tap-hold 250 . >)
+  / (tap-hold 250 / ?)
+  ` (tap-hold 250 ` ~)
+)

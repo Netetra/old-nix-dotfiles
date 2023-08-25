@@ -11,6 +11,7 @@ cursorline = true
 auto-completion = true
 auto-format = true
 auto-save = true
+mouse = false
 
 # 画面に収まるように改行して表示する
 [editor.soft-wrap]
@@ -53,6 +54,9 @@ skip-levels = 2
 '[' = ']'
 '{' = '}'
 '"' = '"'
+'<' = '>'
+'`' = '`'
+
 
 # LSPの設定
 [editor.lsp]
